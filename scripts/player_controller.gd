@@ -8,8 +8,12 @@ enum PlayerState {ATTACKING, IDLE}
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $AttackArea
 
+var is_flipped = false
 var state: PlayerState = PlayerState.IDLE
+var attack_area_offset: Vector2 = Vector2.ZERO
 
+func _ready() -> void:
+	attack_area_offset = attack_area.position
 
 func _physics_process(delta: float) -> void:
 	if state == PlayerState.ATTACKING:
@@ -32,9 +36,15 @@ func _physics_process(delta: float) -> void:
 		velocity = direction.normalized() * direction_multiplier * speed
 		animated_sprite_2d.play("walk")
 		if Input.is_action_pressed("ui_left"):
-			animated_sprite_2d.flip_h = true
+			is_flipped = true
 		elif Input.is_action_pressed("ui_right"):
-			animated_sprite_2d.flip_h = false
+			is_flipped = false
+			
+		animated_sprite_2d.flip_h = is_flipped
+		attack_area.position = attack_area_offset
+		if is_flipped:
+			attack_area.position.x = -attack_area.position.x
+		
 
 	move_and_slide()
 
