@@ -1,0 +1,49 @@
+extends CharacterBody2D
+class_name Player
+
+enum PlayerState {ATTACKING, IDLE}
+
+@export var speed: float = 40.0
+@export var direction_multiplier: Vector2 = Vector2(1, 0.5)
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var attack_area: Area2D = $AttackArea
+
+var state: PlayerState = PlayerState.IDLE
+
+
+func _physics_process(delta: float) -> void:
+	if state == PlayerState.ATTACKING:
+		# just starts monitoring hitbox after the first frame
+		attack_area.monitoring = true 
+		return
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		state = PlayerState.ATTACKING
+		velocity = Vector2.ZERO
+		animated_sprite_2d.play("attack_1")
+		move_and_slide()
+		return
+		
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	if direction == Vector2.ZERO:
+		velocity = direction * 0
+		animated_sprite_2d.play("idle")
+	else: 
+		velocity = direction.normalized() * direction_multiplier * speed
+		animated_sprite_2d.play("walk")
+		if Input.is_action_pressed("ui_left"):
+			animated_sprite_2d.flip_h = true
+		elif Input.is_action_pressed("ui_right"):
+			animated_sprite_2d.flip_h = false
+
+	move_and_slide()
+
+func _on_animated_sprite_2d_animation_finished() -> void:
+	if state == PlayerState.ATTACKING:
+		state = PlayerState.IDLE
+		attack_area.monitoring = false
+
+
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body.has_method("take_damage"):
+		body.take_damage()

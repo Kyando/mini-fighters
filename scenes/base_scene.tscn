@@ -1,0 +1,218 @@
+[gd_scene load_steps=39 format=3 uid="uid://bag4cstwjftoe"]
+
+[ext_resource type="Texture2D" uid="uid://cub8r65n07vuh" path="res://assets/scenario/BG Image.png" id="1_mryrf"]
+[ext_resource type="Texture2D" uid="uid://g5gr4lij5krp" path="res://assets/characters/pirate_captain/09-Idle Sword/Idle Sword 01.png" id="1_pmxr0"]
+[ext_resource type="Texture2D" uid="uid://3lnjisctnhyy" path="res://assets/characters/pirate_captain/09-Idle Sword/Idle Sword 02.png" id="2_mryrf"]
+[ext_resource type="Texture2D" uid="uid://dpdk6simwdrtf" path="res://assets/characters/pirate_captain/09-Idle Sword/Idle Sword 03.png" id="3_e5sna"]
+[ext_resource type="Texture2D" uid="uid://bd4tk30mt8xnn" path="res://assets/characters/pirate_captain/09-Idle Sword/Idle Sword 04.png" id="4_vjnli"]
+[ext_resource type="Texture2D" uid="uid://hxt4ukjmr53w" path="res://assets/characters/pirate_captain/15-Attack 1/Attack 1 01.png" id="5_ehpj7"]
+[ext_resource type="Texture2D" uid="uid://38bkmqgr77lh" path="res://assets/characters/pirate_captain/09-Idle Sword/Idle Sword 05.png" id="5_oelfw"]
+[ext_resource type="Script" uid="uid://bjlcbt2uayrux" path="res://scripts/player_controller.gd" id="5_tl6ws"]
+[ext_resource type="Texture2D" uid="uid://d0qn73602xqd3" path="res://assets/characters/pirate_captain/15-Attack 1/Attack 1 02.png" id="6_tl6ws"]
+[ext_resource type="Texture2D" uid="uid://ll0wqtheeaxs" path="res://assets/characters/pirate_captain/15-Attack 1/Attack 1 03.png" id="7_buawx"]
+[ext_resource type="Texture2D" uid="uid://dejd5xo7quvvi" path="res://assets/scenario/Small Cloud 1.png" id="7_oelfw"]
+[ext_resource type="Texture2D" uid="uid://b3menrv6wfj4j" path="res://assets/scenario/Small Cloud 2.png" id="8_yfdfb"]
+[ext_resource type="Texture2D" uid="uid://x4hvr0wh86ub" path="res://assets/scenario/Small Cloud 3.png" id="9_1stcl"]
+[ext_resource type="Texture2D" uid="uid://p5b6aowsf8jg" path="res://assets/characters/pirate_captain/10-Run Sword/Run Sword 01.png" id="10_70npj"]
+[ext_resource type="Texture2D" uid="uid://btpcdcwvthcii" path="res://assets/characters/pirate_captain/10-Run Sword/Run Sword 02.png" id="11_7hj75"]
+[ext_resource type="Texture2D" uid="uid://cvv6y80l72pof" path="res://assets/characters/pirate_captain/10-Run Sword/Run Sword 03.png" id="12_de42d"]
+[ext_resource type="Texture2D" uid="uid://2i18y0jdhje4" path="res://assets/characters/pirate_captain/10-Run Sword/Run Sword 04.png" id="13_ehpj7"]
+[ext_resource type="Texture2D" uid="uid://3c5wydidj4v3" path="res://assets/characters/pirate_captain/10-Run Sword/Run Sword 05.png" id="14_tl6ws"]
+[ext_resource type="Texture2D" uid="uid://bishpsh15tr77" path="res://assets/characters/pirate_captain/10-Run Sword/Run Sword 06.png" id="15_buawx"]
+[ext_resource type="Texture2D" uid="uid://qrd8dk3yl170" path="res://assets/characters/enemies/crabby/01-Idle/Idle 01.png" id="20_0xy4o"]
+[ext_resource type="Script" uid="uid://diyhc7vxrjdqs" path="res://scripts/enemy_controller.gd" id="20_4pen5"]
+[ext_resource type="Texture2D" uid="uid://cnbugeja81nkv" path="res://assets/characters/enemies/crabby/01-Idle/Idle 02.png" id="21_kfhhx"]
+[ext_resource type="Texture2D" uid="uid://25uuolc6h7ai" path="res://assets/characters/enemies/crabby/01-Idle/Idle 03.png" id="22_nsaf0"]
+[ext_resource type="Texture2D" uid="uid://co2tvq53idkem" path="res://assets/characters/enemies/crabby/01-Idle/Idle 04.png" id="23_knile"]
+[ext_resource type="Texture2D" uid="uid://b7jxrtritjyim" path="res://assets/characters/enemies/crabby/01-Idle/Idle 05.png" id="24_gd3uu"]
+[ext_resource type="Texture2D" uid="uid://c7vog3qfnqoy2" path="res://assets/characters/enemies/crabby/01-Idle/Idle 06.png" id="25_4pen5"]
+[ext_resource type="Texture2D" uid="uid://cyv5mxip62lts" path="res://assets/characters/enemies/crabby/01-Idle/Idle 07.png" id="26_ocdnp"]
+[ext_resource type="Texture2D" uid="uid://dybhdfrr7gwb1" path="res://assets/characters/enemies/crabby/01-Idle/Idle 08.png" id="27_hm2du"]
+[ext_resource type="Texture2D" uid="uid://bqq0uobiasccv" path="res://assets/characters/enemies/crabby/01-Idle/Idle 09.png" id="28_l21uh"]
+[ext_resource type="Texture2D" uid="uid://d2g5uuaem1bik" path="res://assets/characters/enemies/crabby/08-Hit/Hit 01.png" id="29_gd3uu"]
+[ext_resource type="Texture2D" uid="uid://covam57v64hif" path="res://assets/characters/enemies/crabby/08-Hit/Hit 02.png" id="30_4pen5"]
+[ext_resource type="Texture2D" uid="uid://duttdkkm3dts3" path="res://assets/characters/enemies/crabby/08-Hit/Hit 03.png" id="31_ocdnp"]
+[ext_resource type="Texture2D" uid="uid://cwdtimrj7evqc" path="res://assets/characters/enemies/crabby/08-Hit/Hit 04.png" id="32_hm2du"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1stcl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ehpj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tl6ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_buawx")
+}],
+"loop": false,
+"name": &"attack_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pmxr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mryrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e5sna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vjnli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oelfw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_70npj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7hj75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_de42d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ehpj7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tl6ws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_buawx")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yfdfb"]
+radius = 11.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tl6ws"]
+radius = 8.0
+height = 20.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tl6ws"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_0xy4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kfhhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nsaf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_knile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gd3uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4pen5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ocdnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_hm2du")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_l21uh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_gd3uu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_4pen5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ocdnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_hm2du")
+}],
+"loop": false,
+"name": &"take_damage",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buawx"]
+radius = 13.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="BgImage" type="Sprite2D" parent="Background"]
+self_modulate = Color(0.73300546, 0.7330054, 0.7330054, 1)
+rotation = -3.1415925
+scale = Vector2(2, 2)
+texture = ExtResource("1_mryrf")
+
+[node name="SmallCloud1" type="Sprite2D" parent="Background"]
+position = Vector2(-136, -86)
+texture = ExtResource("7_oelfw")
+
+[node name="SmallCloud2" type="Sprite2D" parent="Background"]
+position = Vector2(-18, -78)
+texture = ExtResource("8_yfdfb")
+
+[node name="SmallCloud3" type="Sprite2D" parent="Background"]
+position = Vector2(166, -65)
+texture = ExtResource("9_1stcl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("5_tl6ws")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = SubResource("SpriteFrames_1stcl")
+animation = &"attack_1"
+autoplay = "idle"
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_yfdfb")
+
+[node name="AttackArea" type="Area2D" parent="Player"]
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea"]
+position = Vector2(21, 3)
+shape = SubResource("CapsuleShape2D_tl6ws")
+debug_color = Color(0.6313726, 0.52156866, 0.03137255, 0.41960785)
+
+[node name="CrabbyEnemy" type="CharacterBody2D" parent="."]
+position = Vector2(79, -18)
+script = ExtResource("20_4pen5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CrabbyEnemy"]
+sprite_frames = SubResource("SpriteFrames_tl6ws")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy"]
+shape = SubResource("CapsuleShape2D_buawx")
+
+[connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Player/AttackArea" to="Player" method="_on_attack_area_body_entered"]
+[connection signal="animation_finished" from="CrabbyEnemy/AnimatedSprite2D" to="CrabbyEnemy" method="_on_animated_sprite_2d_animation_finished"]

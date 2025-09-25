@@ -1,0 +1,4 @@
+res://scenes/base_scene.tscn
+res://scenes/player_controller.gd
+res://scenes/enemy_controller.gd
+res://scripts/enemy_controller.gd
