@@ -192,6 +192,8 @@ shape = SubResource("WorldBoundaryShape2D_4pen5")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("5_tl6ws")
+speed = 80.0
+direction_multiplier = Vector2(1, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_1stcl")
