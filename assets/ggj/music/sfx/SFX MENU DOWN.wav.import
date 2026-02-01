@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcp2t3ky83pix"
+path="res://.godot/imported/SFX MENU DOWN.wav-1db2101ec00425e9b5476744d6c622db.sample"
+
+[deps]
+
+source_file="res://assets/ggj/music/sfx/SFX MENU DOWN.wav"
+dest_files=["res://.godot/imported/SFX MENU DOWN.wav-1db2101ec00425e9b5476744d6c622db.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
