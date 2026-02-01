@@ -4,9 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://dejd5xo7quvvi" path="res://assets/scenario/Small Cloud 1.png" id="2_t6bgy"]
 [ext_resource type="Texture2D" uid="uid://b3menrv6wfj4j" path="res://assets/scenario/Small Cloud 2.png" id="3_qejhp"]
 [ext_resource type="Texture2D" uid="uid://x4hvr0wh86ub" path="res://assets/scenario/Small Cloud 3.png" id="4_82u8h"]
+[ext_resource type="Texture2D" uid="uid://dtt8fir3152vs" path="res://assets/ggj/arena/Ringue3.png" id="5_82u8h"]
 [ext_resource type="Script" uid="uid://bjlcbt2uayrux" path="res://scripts/player_controller.gd" id="5_sg72k"]
 [ext_resource type="Texture2D" uid="uid://ckjvfkfns3w2n" path="res://assets/ggj/characters/Lucha teste.png" id="6_lvhds"]
+[ext_resource type="Texture2D" uid="uid://bgwp8in7cwg23" path="res://assets/ggj/arena/Ringue2.png" id="6_sg72k"]
 [ext_resource type="Script" uid="uid://diyhc7vxrjdqs" path="res://scripts/enemy_controller.gd" id="7_iee5v"]
+[ext_resource type="Texture2D" uid="uid://cw1p84pq1lydl" path="res://assets/ggj/arena/Ringue1.png" id="7_lvhds"]
+[ext_resource type="Texture2D" uid="uid://dfrfwajn6r756" path="res://assets/ggj/arena/Ringue0.png" id="8_iee5v"]
 [ext_resource type="PackedScene" uid="uid://cj5tgbqd75l7i" path="res://scenes/audio/bg_music.tscn" id="8_k6ngn"]
 [ext_resource type="PackedScene" uid="uid://dbjos3mli8bp1" path="res://scenes/upgrade_screen/upgrade_screen_ui.tscn" id="9_hue6m"]
 [ext_resource type="Script" uid="uid://dxebigt7g3ogw" path="res://scripts/node_2d.gd" id="9_t6bgy"]
@@ -174,10 +178,25 @@ position = Vector2(6, -39)
 rotation = -3.1415925
 shape = SubResource("WorldBoundaryShape2D_4pen5")
 
+[node name="Arena" type="Sprite2D" parent="Background" unique_id=1489520942]
+texture = ExtResource("5_82u8h")
+
+[node name="Ring" type="Node2D" parent="." unique_id=1679391080]
+
+[node name="RingFloor" type="Sprite2D" parent="Ring" unique_id=63989682]
+texture = ExtResource("6_sg72k")
+
+[node name="Bar" type="Sprite2D" parent="Ring" unique_id=1061886013]
+position = Vector2(1, -1)
+texture = ExtResource("7_lvhds")
+
+[node name="Bar2" type="Sprite2D" parent="Ring" unique_id=75761661]
+texture = ExtResource("8_iee5v")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=566050864]
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=878678372]
-position = Vector2(-75, 34)
+position = Vector2(-158, -25)
 script = ExtResource("5_sg72k")
 speed = 80.0
 direction_multiplier = Vector2(1, 1)

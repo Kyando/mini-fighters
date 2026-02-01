@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cv653ouc4v56h"]
+[gd_scene format=3 uid="uid://cuaanggonff1l"]
 
 [ext_resource type="Script" uid="uid://dfcxqandd36ne" path="res://scripts/main_menu/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://dtjc08uc8467v" path="res://assets/main_menu/imgaleat-6bi-40.jpg" id="2_wu84c"]

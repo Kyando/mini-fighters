@@ -26,8 +26,8 @@ AudioManager="*uid://cic2l6o8lo8lc"
 
 [display]
 
-window/size/viewport_width=540
-window/size/viewport_height=360
+window/size/viewport_width=640
+window/size/viewport_height=320
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
