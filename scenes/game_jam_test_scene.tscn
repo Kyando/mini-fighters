@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://b3menrv6wfj4j" path="res://assets/scenario/Small Cloud 2.png" id="3_vtme5"]
 [ext_resource type="Texture2D" uid="uid://x4hvr0wh86ub" path="res://assets/scenario/Small Cloud 3.png" id="4_0sckx"]
 [ext_resource type="Script" uid="uid://bjlcbt2uayrux" path="res://scripts/player_controller.gd" id="5_dc63x"]
+[ext_resource type="Resource" uid="uid://d4acu4lbn01eo" path="res://resources/attacks/base_attack.tres" id="6_rsmcr"]
+[ext_resource type="Script" uid="uid://byd3mu742fon2" path="res://scripts/status_manager.gd" id="9_5uoqh"]
 [ext_resource type="Texture2D" uid="uid://ckjvfkfns3w2n" path="res://assets/ggj/characters/Lucha teste.png" id="9_7w0qj"]
 [ext_resource type="Script" uid="uid://diyhc7vxrjdqs" path="res://scripts/enemy_controller.gd" id="20_gpw52"]
 [ext_resource type="PackedScene" uid="uid://cj5tgbqd75l7i" path="res://scenes/audio/bg_music.tscn" id="34_ao1gq"]
@@ -178,6 +180,7 @@ position = Vector2(-75, 34)
 script = ExtResource("5_dc63x")
 speed = 80.0
 direction_multiplier = Vector2(1, 1)
+base_attack = ExtResource("6_rsmcr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1498640554]
 scale = Vector2(-1, 1)
@@ -211,6 +214,10 @@ autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy" unique_id=440518053]
 shape = SubResource("CapsuleShape2D_buawx")
+
+[node name="StatusManager" type="Node" parent="CrabbyEnemy" unique_id=1302500306]
+script = ExtResource("9_5uoqh")
+metadata/_custom_type_script = "uid://byd3mu742fon2"
 
 [node name="MusicPlayer" parent="." unique_id=232662493 instance=ExtResource("34_ao1gq")]
 volume_db = -10.0
