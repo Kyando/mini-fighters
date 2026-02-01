@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://nwgjlpe5s7ju"]
+
+[ext_resource type="Script" uid="uid://cic2l6o8lo8lc" path="res://scripts/audio_manager.gd" id="1_1emwb"]
+[ext_resource type="AudioStream" uid="uid://bcp2t3ky83pix" path="res://assets/ggj/music/sfx/SFX MENU DOWN.wav" id="2_ioryo"]
+[ext_resource type="AudioStream" uid="uid://dsuxgsv0w8fmy" path="res://assets/ggj/music/sfx/SFX MENU CONFIRM.wav" id="3_nqjyk"]
+[ext_resource type="AudioStream" uid="uid://bkotqtmyi2mtf" path="res://assets/ggj/music/sfx/SFX MENU RETURN.wav" id="4_vqw5g"]
+
+[node name="AudioManager" type="Node2D" unique_id=1384929976]
+script = ExtResource("1_1emwb")
+ui_hover = ExtResource("2_ioryo")
+ui_select = ExtResource("3_nqjyk")
+ui_open = ExtResource("4_vqw5g")
+ui_close = ExtResource("4_vqw5g")
