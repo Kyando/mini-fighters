@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cj5tgbqd75l7i"]
+
+[ext_resource type="AudioStream" uid="uid://0bamfuxe15k3" path="res://assets/ggj/music/main_menu/menu-loop.wav" id="1_lbik8"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" unique_id=232662493]
+stream = ExtResource("1_lbik8")
+autoplay = true
