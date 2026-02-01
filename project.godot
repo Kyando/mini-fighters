@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="mini-fighters"
-run/main_scene="uid://dgdcprn04q7kl"
+run/main_scene="uid://cv653ouc4v56h"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -31,6 +31,10 @@ window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
+
+[dotnet]
+
+project/assembly_name="mini-fighters"
 
 [input]
 
