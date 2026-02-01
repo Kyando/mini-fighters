@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://cv653ouc4v56h"]
+
+[ext_resource type="Script" uid="uid://dfcxqandd36ne" path="res://scripts/main_menu/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://dtjc08uc8467v" path="res://assets/main_menu/imgaleat-6bi-40.jpg" id="2_wu84c"]
+[ext_resource type="FontFile" uid="uid://cyrr34wngw3ig" path="res://assets/main_menu/Mucho_Power.otf" id="3_8ln24"]
+[ext_resource type="AudioStream" uid="uid://b687qaqdkcsqg" path="res://assets/ggj/music/main_menu/menu-start.wav" id="4_8ln24"]
+[ext_resource type="AudioStream" uid="uid://0bamfuxe15k3" path="res://assets/ggj/music/main_menu/menu-loop.wav" id="5_8ln24"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nlkkf"]
+texture = ExtResource("2_wu84c")
+modulate_color = Color(0.41215247, 0.41215247, 0.41215247, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qe12f"]
+bg_color = Color(0.5595232, 1.2754649e-06, 3.3691526e-07, 1)
+draw_center = false
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+bg_color = Color(1, 0, 0, 0.31764707)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="MainMenu" type="Control" unique_id=345755490]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="Panel" type="Panel" parent="." unique_id=2007439466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nlkkf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1983570799]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.5
+offset_top = 26.0
+offset_right = 150.5
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=635817719]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+text = "Iniciar"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=821933289]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_qe12f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8qtwp")
+text = "Sair"
+
+[node name="Label" type="Label" parent="." unique_id=1717732024]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -229.5
+offset_top = 72.0
+offset_right = 229.5
+offset_bottom = -238.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("3_8ln24")
+text = "JOGUINHO SUPIMPA 
+DOS LUTCHADORES MASCARADOS"
+horizontal_alignment = 1
+
+[node name="main_theme_intro" type="AudioStreamPlayer2D" parent="." unique_id=1501245309]
+stream = ExtResource("4_8ln24")
+
+[node name="main_theme_loop" type="AudioStreamPlayer2D" parent="." unique_id=2089778024]
+stream = ExtResource("5_8ln24")
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
