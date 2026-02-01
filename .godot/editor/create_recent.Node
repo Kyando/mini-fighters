@@ -1,3 +1,4 @@
+res://scripts/status_manager.gd
 AudioStreamPlayer
 AnimationPlayer
 Path2D

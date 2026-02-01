@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AttackData" format=3 uid="uid://d4acu4lbn01eo"]
+
+[ext_resource type="Script" uid="uid://dn23upvmour2v" path="res://scripts/resources_scripts/status_effect_resources.gd" id="1_2t4ba"]
+[ext_resource type="Script" uid="uid://bbv4fk57kc5cf" path="res://scripts/resources_scripts/attack_data_resources.gd" id="2_sxyuw"]
+
+[sub_resource type="Resource" id="Resource_2t4ba"]
+script = ExtResource("1_2t4ba")
+metadata/_custom_type_script = "uid://dn23upvmour2v"
+
+[resource]
+script = ExtResource("2_sxyuw")
+knockback_force = 10.0
+effects = Array[ExtResource("1_2t4ba")]([SubResource("Resource_2t4ba")])
+metadata/_custom_type_script = "uid://bbv4fk57kc5cf"
