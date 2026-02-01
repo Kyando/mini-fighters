@@ -1,1 +1,4 @@
 res://scenes/game_jam_test_scene.tscn
+res://resources/attacks/base_attack.tres
+res://scripts/player_controller.gd
+res://resources/status_effect/base_status_effect.tres

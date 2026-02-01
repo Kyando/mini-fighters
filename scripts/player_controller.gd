@@ -5,8 +5,13 @@ enum PlayerState {ATTACKING, IDLE}
 
 @export var speed: float = 40.0
 @export var direction_multiplier: Vector2 = Vector2(1, 0.5)
+@export var base_attack: AttackData
+
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var attack_area: Area2D = $AttackArea
+
+
 
 var is_flipped = false
 var state: PlayerState = PlayerState.IDLE
@@ -55,5 +60,11 @@ func _on_animated_sprite_2d_animation_finished() -> void:
 
 
 func _on_attack_area_body_entered(body: Node2D) -> void:
-	if body.has_method("take_damage"):
-		body.take_damage()
+	if body.has_method("take_hit"):
+		#body.take_damage()
+		
+		var current_attack = base_attack.duplicate()
+		# Example scaling: current_attack.damage += player_level
+		
+		body.take_hit(current_attack)
+		

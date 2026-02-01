@@ -141,7 +141,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qhdim")
 }],
-"loop": false,
+"loop": true,
 "name": &"attack",
 "speed": 4.0
 }, {
@@ -192,9 +192,6 @@ animations = [{
 radius = 24.0
 height = 52.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_pbvxl"]
-radius = 51.51
-
 [node name="Node2D" type="Node2D" unique_id=910699420]
 
 [node name="Background" type="Node2D" parent="." unique_id=1966169131]
@@ -229,8 +226,6 @@ shape = SubResource("WorldBoundaryShape2D_4pen5")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=878678372 groups=["player"]]
 position = Vector2(0, 30)
-collision_layer = 2
-collision_mask = 3
 script = ExtResource("5_dc63x")
 speed = 80.0
 direction_multiplier = Vector2(1, 1)
@@ -249,7 +244,6 @@ shape = SubResource("CircleShape2D_yfdfb")
 
 [node name="AttackArea" type="Area2D" parent="Player" unique_id=436488851]
 position = Vector2(21, 3)
-collision_mask = 5
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=1762498918]
@@ -259,7 +253,6 @@ debug_color = Color(0.6313726, 0.52156866, 0.03137255, 0.41960785)
 
 [node name="CrabbyEnemy" type="CharacterBody2D" parent="." unique_id=368894923]
 position = Vector2(-50, 0)
-collision_layer = 4
 script = ExtResource("20_gpw52")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CrabbyEnemy" unique_id=2033019410]
@@ -267,6 +260,7 @@ scale = Vector2(-1, 1)
 sprite_frames = SubResource("SpriteFrames_tl6ws")
 animation = &"attack"
 autoplay = "idle"
+frame_progress = 0.8047374
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy" unique_id=440518053]
 shape = SubResource("CapsuleShape2D_buawx")
@@ -284,7 +278,6 @@ metadata/_custom_type_script = "uid://byd3mu742fon2"
 
 [node name="AttackArea" type="Area2D" parent="CrabbyEnemy" unique_id=597925160]
 position = Vector2(21, 3)
-collision_mask = 3
 monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy/AttackArea" unique_id=292469985]
@@ -292,61 +285,9 @@ position = Vector2(4, 0)
 shape = SubResource("CapsuleShape2D_tl6ws")
 debug_color = Color(0.6313726, 0.52156866, 0.03137255, 0.41960785)
 
-[node name="SeparationArea" type="Area2D" parent="CrabbyEnemy" unique_id=2120003059]
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy/SeparationArea" unique_id=2096796551]
-shape = SubResource("CircleShape2D_pbvxl")
-debug_color = Color(0.7154605, 0.35144556, 0.83996785, 0.41960785)
-
-[node name="CrabbyEnemy2" type="CharacterBody2D" parent="." unique_id=1748398122]
-position = Vector2(-67, 9)
-collision_layer = 4
-script = ExtResource("20_gpw52")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CrabbyEnemy2" unique_id=1173692545]
-scale = Vector2(-1, 1)
-sprite_frames = SubResource("SpriteFrames_tl6ws")
-animation = &"attack"
-autoplay = "idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy2" unique_id=1136552470]
-shape = SubResource("CapsuleShape2D_buawx")
-
-[node name="FollowPlayerComponent" type="Node" parent="CrabbyEnemy2" unique_id=663469233]
-script = ExtResource("10_pbvxl")
-stop_distance = 50.0
-attack_range = 51.0
-attack_cooldown = 4.0
-metadata/_custom_type_script = "uid://q6ejma4g3xha"
-
-[node name="StatusManager" type="Node" parent="CrabbyEnemy2" unique_id=313330521]
-script = ExtResource("9_5uoqh")
-metadata/_custom_type_script = "uid://byd3mu742fon2"
-
-[node name="AttackArea" type="Area2D" parent="CrabbyEnemy2" unique_id=2005115959]
-position = Vector2(21, 3)
-collision_mask = 3
-monitoring = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy2/AttackArea" unique_id=1313939598]
-position = Vector2(4, 0)
-shape = SubResource("CapsuleShape2D_tl6ws")
-debug_color = Color(0.6313726, 0.52156866, 0.03137255, 0.41960785)
-
-[node name="SeparationArea" type="Area2D" parent="CrabbyEnemy2" unique_id=454574518]
-collision_layer = 8
-collision_mask = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy2/SeparationArea" unique_id=1233394912]
-shape = SubResource("CircleShape2D_pbvxl")
-debug_color = Color(0.7154605, 0.35144556, 0.83996785, 0.41960785)
-
 [node name="MusicPlayer" parent="." unique_id=232662493 instance=ExtResource("34_ao1gq")]
 volume_db = -10.0
 
 [connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Player/AttackArea" to="Player" method="_on_attack_area_body_entered"]
 [connection signal="animation_finished" from="CrabbyEnemy/AnimatedSprite2D" to="CrabbyEnemy" method="_on_animated_sprite_2d_animation_finished"]
-[connection signal="animation_finished" from="CrabbyEnemy2/AnimatedSprite2D" to="CrabbyEnemy2" method="_on_animated_sprite_2d_animation_finished"]
