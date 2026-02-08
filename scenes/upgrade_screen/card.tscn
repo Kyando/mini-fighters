@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://b6drmmjgjdft5"]
+
+[ext_resource type="Script" uid="uid://d3d1owclmlg3f" path="res://scripts/upgrade_card.gd" id="1_x00ty"]
+[ext_resource type="Texture2D" uid="uid://bnnsan54g13ur" path="res://assets/cards/Card.png" id="2_6h7le"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3xej"]
+atlas = ExtResource("2_6h7le")
+region = Rect2(217, -1.5, 101, 161.5)
+
+[node name="Card" type="Button" unique_id=1702684881]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -421.0
+offset_bottom = -201.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8000002, 2.160424)
+script = ExtResource("1_x00ty")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1590132625]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=799756792]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_v3xej")

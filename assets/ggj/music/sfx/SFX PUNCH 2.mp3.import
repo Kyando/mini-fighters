@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://xhto4tcevfws"
+path="res://.godot/imported/SFX PUNCH 2.mp3-b8465cd35db4c311b2ea4047c39c5cd2.mp3str"
+
+[deps]
+
+source_file="res://assets/ggj/music/sfx/SFX PUNCH 2.mp3"
+dest_files=["res://.godot/imported/SFX PUNCH 2.mp3-b8465cd35db4c311b2ea4047c39c5cd2.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -22,6 +22,7 @@ func _physics_process(_delta: float) -> void:
 func take_hit(attack_data: AttackData):
 	# 1. DATA: Apply the raw numbers
 	health -= attack_data.damage
+	AudioManager.play_hit()
 	
 	if status_manager:
 		for effect in attack_data.effects:
@@ -35,5 +36,6 @@ func take_hit(attack_data: AttackData):
 		die()
 
 func die():
+	UIManager.set_level_progress(50)
 	died.emit(global_position)
 	queue_free()

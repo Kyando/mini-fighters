@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dt0s3dg8ps1hm"]
+
+[ext_resource type="FontFile" uid="uid://cyrr34wngw3ig" path="res://assets/main_menu/Mucho_Power.otf" id="1_27bld"]
+[ext_resource type="Script" uid="uid://cvnqx0xnjftd0" path="res://scripts/hud_ui.gd" id="1_rgq8x"]
+[ext_resource type="Texture2D" uid="uid://cfb43viedp7gf" path="res://assets/gui/healthbarUnder.png" id="3_dh3a3"]
+[ext_resource type="Texture2D" uid="uid://f3acv863h0ik" path="res://assets/gui/healthbarProgress.png" id="4_47rti"]
+[ext_resource type="Texture2D" uid="uid://ckjvfkfns3w2n" path="res://assets/ggj/characters/Lucha teste.png" id="5_kkiei"]
+
+[sub_resource type="Theme" id="Theme_n3kp7"]
+
+[sub_resource type="Gradient" id="Gradient_cq5av"]
+colors = PackedColorArray(1, 0.4924252, 0.44194877, 1, 1, 0.49411765, 0.44313726, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ml6tl"]
+gradient = SubResource("Gradient_cq5av")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5gbug"]
+atlas = ExtResource("5_kkiei")
+region = Rect2(7.2052917, 0.7068825, 40.28926, 41.98566)
+
+[node name="HudUi" type="Control" unique_id=2081104197]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rgq8x")
+
+[node name="RoundLabel" type="Label" parent="." unique_id=1345445213]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 283.0
+offset_right = 628.0
+offset_bottom = 306.27585
+scale = Vector2(1, 1.1600013)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_27bld")
+text = "Round 1"
+horizontal_alignment = 2
+
+[node name="LevelLabel" type="Label" parent="." unique_id=1244254315]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 283.0
+offset_right = 147.0
+offset_bottom = 300.0
+scale = Vector2(1, 1.1600013)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_27bld")
+theme_override_font_sizes/font_size = 12
+text = "Level 1"
+horizontal_alignment = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1422488679]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = -45.0
+offset_right = 197.0
+offset_bottom = -18.0
+grow_vertical = 0
+step = 1.0
+show_percentage = false
+
+[node name="HeathBar" type="Node2D" parent="." unique_id=988117770]
+
+[node name="Heathbar" type="TextureProgressBar" parent="HeathBar" unique_id=312465288]
+offset_left = 55.000004
+offset_top = 15.999999
+offset_right = 406.0
+offset_bottom = 100.0
+scale = Vector2(1.6541456, 2.324228)
+theme = SubResource("Theme_n3kp7")
+value = 100.0
+rounded = true
+fill_mode = 1
+texture_under = ExtResource("3_dh3a3")
+texture_progress = ExtResource("4_47rti")
+
+[node name="TextureRect2" type="TextureRect" parent="HeathBar" unique_id=1058505892]
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 271.0
+offset_bottom = 52.0
+scale = Vector2(0.12177779, 0.7611136)
+texture = SubResource("GradientTexture1D_ml6tl")
+
+[node name="TextureRect" type="TextureRect" parent="HeathBar" unique_id=1348264866]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 60.0
+offset_bottom = 57.0
+scale = Vector2(0.5784456, 0.5784456)
+texture = SubResource("AtlasTexture_5gbug")

@@ -4,6 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://bcp2t3ky83pix" path="res://assets/ggj/music/sfx/SFX MENU DOWN.wav" id="2_ioryo"]
 [ext_resource type="AudioStream" uid="uid://dsuxgsv0w8fmy" path="res://assets/ggj/music/sfx/SFX MENU CONFIRM.wav" id="3_nqjyk"]
 [ext_resource type="AudioStream" uid="uid://bkotqtmyi2mtf" path="res://assets/ggj/music/sfx/SFX MENU RETURN.wav" id="4_vqw5g"]
+[ext_resource type="AudioStream" uid="uid://b62adnoxv3cdo" path="res://assets/ggj/music/sfx/SFX PUNCH HIT 1.mp3" id="5_ioryo"]
 
 [node name="AudioManager" type="Node2D" unique_id=1384929976]
 script = ExtResource("1_1emwb")
@@ -11,3 +12,4 @@ ui_hover = ExtResource("2_ioryo")
 ui_select = ExtResource("3_nqjyk")
 ui_open = ExtResource("4_vqw5g")
 ui_close = ExtResource("4_vqw5g")
+player_punch = ExtResource("5_ioryo")

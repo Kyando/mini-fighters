@@ -10,6 +10,29 @@ var current_screen = null
 
 var selected_index := 0
 var cards := []
+var round = 1
+var level_progress = 0
+var level = 1
+
+const LEVEL_MAX := 100
+
+func set_round(round):
+	round = round
+	
+func set_level_progress(progress):
+	level_progress += progress
+
+	if level_progress >= LEVEL_MAX:
+		show_upgrade_screen()
+		level_progress = 0
+		level_up()
+
+func show_upgrade_screen():
+	play(true)
+	current_screen.visible = true
+
+func level_up():
+	level += 1
 
 func register_screen(screen):
 	current_screen = screen

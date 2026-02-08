@@ -30,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		state = PlayerState.ATTACKING
 		velocity = Vector2.ZERO
 		animated_sprite_2d.play("attack_1")
+		AudioManager.play_punch()
 		move_and_slide()
 		return
 		
@@ -67,4 +68,6 @@ func _on_attack_area_body_entered(body: Node2D) -> void:
 		# Example scaling: current_attack.damage += player_level
 		
 		body.take_hit(current_attack)
-		
+
+
+var audioPlayer := AudioStreamPlayer.new()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bag4cstwjftoe"]
+[gd_scene format=3 uid="uid://bag4cstwjftoe"]
 
 [ext_resource type="Texture2D" uid="uid://cub8r65n07vuh" path="res://assets/scenario/BG Image.png" id="1_mryrf"]
 [ext_resource type="Texture2D" uid="uid://g5gr4lij5krp" path="res://assets/characters/pirate_captain/09-Idle Sword/Idle Sword 01.png" id="1_pmxr0"]
@@ -159,70 +159,70 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_buawx"]
 radius = 13.0
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=1339498990]
 
-[node name="Background" type="Node2D" parent="."]
+[node name="Background" type="Node2D" parent="." unique_id=818812972]
 
-[node name="BgImage" type="Sprite2D" parent="Background"]
+[node name="BgImage" type="Sprite2D" parent="Background" unique_id=673617689]
 self_modulate = Color(0.73300546, 0.7330054, 0.7330054, 1)
 rotation = -3.1415925
 scale = Vector2(2, 2)
 texture = ExtResource("1_mryrf")
 
-[node name="SmallCloud1" type="Sprite2D" parent="Background"]
+[node name="SmallCloud1" type="Sprite2D" parent="Background" unique_id=58055944]
 position = Vector2(-136.1797, -86)
 texture = ExtResource("7_oelfw")
 
-[node name="SmallCloud2" type="Sprite2D" parent="Background"]
+[node name="SmallCloud2" type="Sprite2D" parent="Background" unique_id=903942476]
 position = Vector2(-18, -78)
 texture = ExtResource("8_yfdfb")
 
-[node name="SmallCloud3" type="Sprite2D" parent="Background"]
+[node name="SmallCloud3" type="Sprite2D" parent="Background" unique_id=2030449607]
 position = Vector2(167, -68)
 texture = ExtResource("9_1stcl")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Background"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Background" unique_id=1088865734]
 position = Vector2(0, -4)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Background/StaticBody2D" unique_id=1636911227]
 rotation = -3.1415925
 shape = SubResource("WorldBoundaryShape2D_4pen5")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1637834100]
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1925649551]
 script = ExtResource("5_tl6ws")
 speed = 80.0
 direction_multiplier = Vector2(1, 1)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=247112574]
 sprite_frames = SubResource("SpriteFrames_1stcl")
 animation = &"attack_1"
 autoplay = "idle"
 frame = 2
 frame_progress = 1.0
 
-[node name="CollisionShape" type="CollisionShape2D" parent="Player"]
+[node name="CollisionShape" type="CollisionShape2D" parent="Player" unique_id=491675728]
 shape = SubResource("CircleShape2D_yfdfb")
 
-[node name="AttackArea" type="Area2D" parent="Player"]
+[node name="AttackArea" type="Area2D" parent="Player" unique_id=33911663]
 position = Vector2(21, 3)
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AttackArea" unique_id=953621059]
 shape = SubResource("CapsuleShape2D_tl6ws")
 debug_color = Color(0.6313726, 0.52156866, 0.03137255, 0.41960785)
 
-[node name="CrabbyEnemy" type="CharacterBody2D" parent="."]
+[node name="CrabbyEnemy" type="CharacterBody2D" parent="." unique_id=1537090186]
 position = Vector2(79, -18)
 script = ExtResource("20_4pen5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CrabbyEnemy"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CrabbyEnemy" unique_id=1846402813]
 sprite_frames = SubResource("SpriteFrames_tl6ws")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyEnemy" unique_id=1281637936]
 shape = SubResource("CapsuleShape2D_buawx")
 
 [connection signal="animation_finished" from="Player/AnimatedSprite2D" to="Player" method="_on_animated_sprite_2d_animation_finished"]
